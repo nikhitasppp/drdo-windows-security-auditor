@@ -1,0 +1,19 @@
+# Every report format except PDF is pure Python standard library (see
+# README.md "Design principles"):
+#   - subprocess   (invoking powershell.exe, secedit, auditpol)
+#   - winreg       (direct registry access, Windows-only stdlib module)
+#   - ctypes       (IsUserAnAdmin privilege check, and short-path lookups)
+#   - json, csv, html, dataclasses, enum, argparse, logging, unittest
+#
+# The one deliberate exception: the "pdf" report format (--formats pdf)
+# uses fpdf2 to render the PDF directly in Python -- no browser, no
+# subprocess, no OS print dialog involved. An earlier version of this
+# format shelled out to headless Microsoft Edge instead; that approach
+# proved unreliable in practice (silent failures sensitive to whether
+# another Edge window was open, and to spaces in the file path) and was
+# replaced. console/json/csv/html need nothing from this file at all.
+#
+# Requires Python 3.10+ (developed and tested against 3.14) and Windows,
+# since winreg and ctypes.windll are Windows-only.
+
+fpdf2>=2.8

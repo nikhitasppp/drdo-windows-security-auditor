@@ -1,0 +1,29 @@
+{
+  "_comment": "Scoring methodology configuration. See FRAMEWORK.md for full rationale.",
+  "methodology_version": "1.0",
+
+  "severity_weights": {
+    "CRITICAL": 10,
+    "HIGH": 7,
+    "MEDIUM": 4,
+    "LOW": 1,
+    "INFO": 0
+  },
+
+  "status_credit": {
+    "_comment": "Fraction of a rule's weight counted toward the PASS side of the compliance score.",
+    "PASS": 1.0,
+    "WARNING": 0.5,
+    "FAIL": 0.0
+  },
+
+  "statuses_excluded_from_scoring": [
+    "NOT_APPLICABLE",
+    "UNABLE_TO_COLLECT"
+  ],
+
+  "risk_score": {
+    "_comment": "Risk score counts only FAIL statuses, weighted by severity, as a fraction of all evaluated (scored) weight.",
+    "counted_statuses": ["FAIL"]
+  }
+}

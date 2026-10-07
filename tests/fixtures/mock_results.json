@@ -1,0 +1,183 @@
+{
+  "system": {
+    "status": "OK",
+    "data": {
+      "os_caption": "Microsoft Windows 11 Pro (MOCK)",
+      "os_version": "10.0.26100",
+      "os_build": "26100",
+      "architecture": "64-bit",
+      "computer_name": "MOCK-HOST",
+      "domain_or_workgroup": "WORKGROUP",
+      "part_of_domain": false,
+      "cpu_name": "Mock CPU",
+      "ram_total_gb": 16.0,
+      "volumes": [{"drive": "C:", "size_gb": 500.0, "free_gb": 200.0}],
+      "firmware_type": "UEFI",
+      "uptime_hours": 5.0
+    },
+    "not_applicable": {
+      "tpm_ready": "No TPM device is present on this system (mock)"
+    },
+    "errors": {
+      "secure_boot_enabled": "Administrator privileges required (mock)"
+    }
+  },
+  "users": {
+    "status": "OK",
+    "data": {
+      "local_users": [{"name": "Administrator", "enabled": false, "password_required": true, "last_logon": null}],
+      "guest_account_enabled": false,
+      "accounts_without_password": ["MockWeakUser"],
+      "administrators_group_member_count": 2,
+      "inactive_accounts_90d": [],
+      "builtin_admin_enabled": false
+    }
+  },
+  "authentication": {
+    "status": "OK",
+    "data": {
+      "min_password_length": 8,
+      "password_complexity_enabled": true,
+      "max_password_age_days": 90,
+      "password_history_size": 5,
+      "lockout_threshold": 5,
+      "lockout_duration_minutes": 30,
+      "uac_enabled": true,
+      "uac_consent_prompt_behavior_admin": 5,
+      "screen_lock_enabled": true,
+      "screen_lock_timeout_minutes": 10
+    }
+  },
+  "security": {
+    "status": "OK",
+    "data": {
+      "defender_antivirus_enabled": false,
+      "smartscreen_enabled": true,
+      "registered_av_products": ["Windows Defender", "MockAV"],
+      "netprotector_running": true,
+      "netprotector_last_updated_date": "2026-09-01T00:00:00"
+    },
+    "not_applicable": {
+      "defender_signature_last_updated_date": "Microsoft Defender Antivirus is not the active engine on this system (mock)"
+    }
+  },
+  "firewall": {
+    "status": "OK",
+    "data": {
+      "domain_profile_enabled": true,
+      "private_profile_enabled": true,
+      "public_profile_enabled": true
+    }
+  },
+  "network": {
+    "status": "OK",
+    "data": {
+      "high_risk_ports_listening": [],
+      "connection_profiles": [{"Name": "MockNet", "NetworkCategory": "Private"}],
+      "dns_servers": [{"InterfaceAlias": "Ethernet", "ServerAddresses": ["192.168.1.1"]}],
+      "proxy_enabled": false,
+      "wireless_interfaces": [{"Name": "Wi-Fi", "InterfaceDescription": "Mock Wi-Fi Adapter", "Status": "Up"}],
+      "wireless_adapter_enabled": true
+    }
+  },
+  "updates": {
+    "status": "OK",
+    "data": {
+      "wuauserv_running": true,
+      "days_since_last_update": 10,
+      "last_update_date": "2026-08-08T00:00:00",
+      "updates_paused": false
+    }
+  },
+  "services": {
+    "status": "OK",
+    "data": {
+      "firewall_service_running": true,
+      "defender_service_running": false,
+      "remote_registry_running": false,
+      "print_spooler_running": true,
+      "auto_start_services": ["mpssvc", "wuauserv"]
+    }
+  },
+  "applications": {
+    "status": "OK",
+    "data": {
+      "installed_applications": [{"name": "Mock App", "version": "1.0", "publisher": "Mock Inc."}],
+      "excessive_startup_entries": false
+    }
+  },
+  "processes": {
+    "status": "OK",
+    "data": {
+      "running_processes": [{"name": "explorer", "pid": 1234, "path": "C:\\WINDOWS\\explorer.exe"}],
+      "processes_from_unusual_paths": []
+    }
+  },
+  "remote_access": {
+    "status": "OK",
+    "data": {
+      "rdp_enabled": false,
+      "rdp_nla_required": false,
+      "remote_assistance_enabled": true,
+      "winrm_running": false
+    }
+  },
+  "policies": {
+    "status": "OK",
+    "data": {
+      "risky_execution_policy_scopes": [],
+      "script_block_logging_enabled": false,
+      "device_install_restriction_enabled": false
+    }
+  },
+  "storage": {
+    "status": "OK",
+    "data": {
+      "bitlocker_os_drive_protected": true,
+      "bitlocker_fixed_drives_unprotected": [],
+      "bitlocker_removable_unprotected": [],
+      "non_default_smb_shares": [],
+      "system_dir_unexpected_write_access": false
+    }
+  },
+  "event_logs": {
+    "status": "OK",
+    "data": {
+      "security_log_size_adequate": true,
+      "failed_logon_count_24h": 2,
+      "logon_audit_policy_enabled": true,
+      "system_log_available": true
+    }
+  },
+  "devices": {
+    "status": "OK",
+    "data": {
+      "usb_storage_policy_state": "Manual",
+      "usb_devices_connected": [{"FriendlyName": "Mock USB Mass Storage Device", "Status": "OK"}],
+      "usb_storage_devices_connected": [{"FriendlyName": "Mock USB Mass Storage Device", "Status": "OK"}],
+      "bluetooth_present": true,
+      "bluetooth_enabled": true,
+      "webcam_access_setting": "Allow",
+      "microphone_access_setting": "Allow"
+    }
+  },
+  "browser": {
+    "status": "OK",
+    "data": {
+      "installed_browsers": [{"name": "Microsoft Edge", "executable": "msedge.exe", "path": "C:\\mock\\msedge.exe", "version": "120.0.0.0"}],
+      "edge_installed": true,
+      "edge_smartscreen_enabled": true,
+      "browser_proxy_override": false
+    }
+  },
+  "backup": {
+    "status": "OK",
+    "data": {
+      "sdrsvc_service_state": "Stopped",
+      "recovery_partition_present": true
+    },
+    "errors": {
+      "system_restore_enabled": "Administrator privileges required to read System Restore state via Get-ComputerRestorePoint (mock)"
+    }
+  }
+}

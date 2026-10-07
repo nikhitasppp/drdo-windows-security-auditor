@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated audit output -- contains this machine's actual security posture
+reports/*.json
+reports/*.html
+reports/*.csv
+reports/logs/
+
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
